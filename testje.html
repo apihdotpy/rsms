@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script>
+	function my_fun(str){
+		if(window.XMLHTTpRequest){
+			xmlhttp = new XMLHTTpRequest();
+	} <?php else{
+		  		 xmlhtpp= new ActiveXObject("Microsoft.XMLHTPP");
+	}
+	xmlhtpp.onreadystatechange=function(){
+		if(this.readystate==4 && this.status==200){
+			document.getElementById('poll').innerHTML = this.responseText;
+
+		}
+	}
+	xmlhtpp.open("GET","helper.php?value="+str, true);
+	xmlhtpp.send();
+
+}
+</script>
+<body>
+	<div style="margin: auto; width: 300px;">
+		<select id="SelectA" onchange="my_fun(this.value);">
+			<option>Select Type of Drink</option>
+			<option value="Hot">Hot drink</option>
+			<option value="Cold">Cold Drinks </option>
+	</select>
+
+	<br><br><br><br>
+	<div id = "poll">
+		<select>
+			<option>Select Drink</option>
+		</select>
+
+</body>
+

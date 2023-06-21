@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="h-screen flex" style="font-family: Inter, san-serif">
+      <div class="w-3/5 relative">
+        <img
+          src="https://i.ibb.co/t38Y9My/Ajla-1.jpg" 
+          alt=""
+          class="absolute bottom-16 left-0 w-full"
+        />
+      </div>
+      <div class="flex-auto">
+        <div class="max-w-sm mx-auto mt-20">
+          <div class="flex flex-col items-center">
+            <img src="logov2ADK.png"  alt="logo"  style="height: 120 px; width: 120px; margin-block: 20px;" />
+          </div>
+          <form action="CheckLogin.php" method="post">
+            <div class="mb-4">
+              <label
+                for="username"
+                class="text-sm block text-slate-900 font-semibold leading-6"
+                >Username
+              </label>
+              <input
+                type="text"
+                name="username"
+                class="appearance-none mt-2 text-sm w-full h-10 ring-1 ring-slate-200 px-3 rounded-md focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="password"
+                class="text-sm block text-slate-900 font-semibold leading-6"
+                >Password
+              </label>
+              <input
+                type="password"
+                name="password"
+                class="appearance-none mt-2 text-sm w-full h-10 ring-1 ring-slate-200 px-3 rounded-md focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                required
+              />
+            </div>
+            <div class="mb-8">
+              <label
+                for="role"
+                class="text-sm block text-slate-900 font-semibold leading-6"
+                >Role as
+              </label>
+              <select
+                type="text"
+                name="userrole"
+                class="appearance-none mt-2 text-sm w-full h-10 ring-1 ring-slate-200 px-3 rounded-md focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                required
+              >
+                <option value="1">Admin</option>
+                <option value="2">Staff</option>
+                <option value="3">Supplier</option>
+              </select>
+            </div>
+            <button
+              type="submit"
+              class="w-full inline-flex justify-center text-sm font-semibold py-2.5 px-4 mt-4 rounded-md text-white bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500" name="submit"
+            >
+              Sign in to your account
+            </button>
+            <span class="block mt-12 text-center">
+              Don't have an account?
+              <a href="supplierReg.php" class="text-sky-500 font-semibold">Sign up now</a>
+            </span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
